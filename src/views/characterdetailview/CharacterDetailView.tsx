@@ -32,7 +32,7 @@ export const CharacterDetailView = (results: ICharacter) => {
   return (
     <PageWrapper isLoading={loading}>
       <div className="main characterdetail-postion">
-        <h1>Hallo {id}</h1>
+        <h1>Hallo Yacine {id}</h1>
         {character && (
           <>
             <img
