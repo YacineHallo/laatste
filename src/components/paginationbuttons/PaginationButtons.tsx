@@ -1,5 +1,6 @@
 //import { useState } from "react";
 import "../../App.scss";
+//import { Pagination } from "@amsterdam/asc-ui";
 
 //@ts-ignore
 export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
