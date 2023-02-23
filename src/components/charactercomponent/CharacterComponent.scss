@@ -91,6 +91,8 @@
     }
     &-component {
       list-style-type: none;
+      padding-bottom: 2rem;
+      padding-left: 1rem;
       :hover {
         text-decoration: underline;
         text-decoration-color: $color-primary-black;
@@ -98,6 +100,7 @@
       }
       &__eigenschap {
         list-style-type: none;
+        font-weight: 700;
       }
     }
 
