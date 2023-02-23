@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { SearchBarToggle } from "@amsterdam/asc-ui";
 import "../../App.scss";
 
 export const Navigatie = () => {
@@ -49,10 +50,15 @@ export const Navigatie = () => {
               zoek
             </NavLink>
           </li>
-          <img
+          {/* <img
             src="https://www.amsterdam.nl/views/core/images/svg/search-icon-black.svg"
             className="navigation__zoek__img"
             alt="Zoek knop"
+          /> */}
+          <SearchBarToggle
+            align="left"
+            onOpen={function noRefCheck() {}}
+            onSubmit={function noRefCheck() {}}
           />
         </ul>
       </nav>
