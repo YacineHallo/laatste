@@ -32,18 +32,18 @@ export const CharacterDetailView = (results: ICharacter) => {
   return (
     <PageWrapper isLoading={loading}>
       <div className="main characterdetail-postion">
-        <h1>Hallo Yacine {id}</h1>
         {character && (
           <>
+            <h1>{character.name}</h1>
             <img
               src={character.image}
               alt={`drawing of ${character.name}`}
               className="character__img"
-              width="250"
-              height="200"
+              width="600"
+              height="600"
             />
             <ul>
-              <li>{character.name}</li>
+              <li>{id}</li>
               <li>{character.status}</li>
               <li>{character.species}</li>
               <li>{character.gender}</li>
