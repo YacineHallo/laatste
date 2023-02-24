@@ -7,7 +7,7 @@ import { HomeView } from "./views/homeview/HomeView";
 import { Navigatie } from "./components/navigatie/Navigatie";
 import Footer1 from "./components/footer/Footer";
 import { CharacterDetailView } from "./views/characterdetailview/CharacterDetailView";
-//import { CharacterDetail } from "./views/characterdetail/CharacterDetail";
+import { ContactView } from "./views/contactview/ContactView";
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
           }
           path="/characters/:id"
         />
+        <Route element={<ContactView />} path="/contact" />
       </Routes>
       <Footer1 />
     </div>

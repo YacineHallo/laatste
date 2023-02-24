@@ -25,7 +25,7 @@ export const Navigatie = () => {
       <nav className="header__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <NavLink to="/characters" className="navigation__link">
+            <NavLink to="/" className="navigation__link">
               Characters
             </NavLink>
           </li>
@@ -40,8 +40,8 @@ export const Navigatie = () => {
             </NavLink>
           </li>
           <li className="navigation__item">
-            <NavLink to="#" className="navigation__link">
-              contact
+            <NavLink to="/contact" className="navigation__link">
+              Contact
             </NavLink>
           </li>
         </ul>

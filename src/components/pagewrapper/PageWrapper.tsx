@@ -1,6 +1,7 @@
 //Deze moet rond iedere view
 import React from "react";
 import "../../App.scss";
+import { Spinner } from "@amsterdam/asc-assets";
 
 interface IPageWrapperProps {
   children: React.ReactNode;
@@ -9,8 +10,6 @@ interface IPageWrapperProps {
 
 export const PageWrapper = ({ isLoading, children }: IPageWrapperProps) => {
   return (
-    <div className="container__main">
-      {isLoading ? <p>...loading</p> : children}
-    </div>
+    <div className="container__main">{isLoading ? <Spinner /> : children}</div>
   );
 };

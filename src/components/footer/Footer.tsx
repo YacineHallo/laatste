@@ -144,34 +144,20 @@ const Footer1 = () => (
             xLarge: 4
           }}
         >
-          <FooterSection title="Questions?">
+          <FooterSection title="Achtergrond">
             <Paragraph gutterBottom={8}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-              dolor doloremque ea eos facere hic ipsum nobis provident quidem
-              voluptates.
+              <p>
+                Deze site is gemaakt als:{" "}
+                <address>Eindopdracht Front-end Developer Leertraject</address>
+              </p>
+              <p>
+                <small>&copy; 2023 Yacine Hesseling</small>
+              </p>
+              <p>
+                Mijn mailadres:{" "}
+                <a href="mailto:y.hesseling@amsterdam.nl">email</a>
+              </p>
             </Paragraph>
-            <List>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor.
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor sit.
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem.
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum.
-                </Link>
-              </ListItem>
-            </List>
           </FooterSection>
         </Column>
       </Row>
