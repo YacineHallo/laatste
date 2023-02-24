@@ -26,9 +26,10 @@ const CharacterComponent = (results: ICharacter) => {
             <li className="character-component__eigenschap hover">
               Species: {species}
             </li>
-            <li className="character-component__eigenschap hover">
+            <li className="character-component__eigenschap hover badge ">
               Status: {status}
             </li>
+
             <li className="character-component__eigenschap hover">
               Gender: {gender}
             </li>

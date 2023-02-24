@@ -8,6 +8,9 @@
   align-items: center;
   background-color: $color-primary-white;
   margin: auto;
+  @media screen and (max-width: 819px) {
+    justify-content: center;
+  }
 }
 
 .button-pagination {
@@ -22,5 +25,25 @@
   font-size: $font-size-logo;
   padding: 1.2rem 1.4rem;
   margin: 1rem 5rem;
+  @media screen and (max-width: 819px) {
+    padding: 0.8rem 1rem;
+    margin: 1rem 2rem;
+  }
   //position: fixed;
 }
+
+// .home-buttons {
+//   position: fixed;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background: white;
+//   width: 100%;
+//   padding: 20px;
+//   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+//   transform: translateY(0);
+//   transition: transform 0.2s ease;
+
+//   &--hidden {
+//     transform: translateY(100%);
+//   }
