@@ -44,11 +44,6 @@ const Footer1 = () => (
                   Lorem.
                 </Link>
               </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor sit.
-                </Link>
-              </ListItem>
             </List>
           </FooterSection>
         </Column>
@@ -62,31 +57,78 @@ const Footer1 = () => (
             xLarge: 4
           }}
         >
-          <FooterSection title="Some share links">
+          <FooterSection title="Volg de gemeente">
             <List>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor sit.
+                <Link
+                  darkBackground
+                  href="https://www.amsterdam.nl/nieuws/volg-de-gemeente/nieuwsbrief-amsterdam/"
+                  inList
+                  target="_blank"
+                >
+                  Nieuwbrief Amsterdam
+                </Link>
+              </ListItem>
+
+              <ListItem>
+                <Link
+                  darkBackground
+                  href="https://twitter.com/AmsterdamNL"
+                  inList
+                  target="_blank"
+                >
+                  Twitter
                 </Link>
               </ListItem>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem.
+                <Link
+                  darkBackground
+                  href="https://www.facebook.com/gemeenteamsterdam"
+                  target="_blank"
+                  inList
+                >
+                  {" "}
+                  Facebook
                 </Link>
               </ListItem>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum.
+                <Link
+                  darkBackground
+                  href="https://www.instagram.com/gemeenteamsterdam/"
+                  target="_blank"
+                  inList
+                >
+                  Instagram
                 </Link>
               </ListItem>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum.
+                <Link
+                  darkBackground
+                  href="https://www.linkedin.com/company/gemeente-amsterdam"
+                  target="_blank"
+                  inList
+                >
+                  LinkedIn
                 </Link>
               </ListItem>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor sit amet.
+                <Link
+                  darkBackground
+                  href="https://www.youtube.com/channel/UCEiYFPFR5jGhFakHhbswlig"
+                  target="_blank"
+                  inList
+                >
+                  YouTube
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  darkBackground
+                  href="https://werkenbij.amsterdam.nl/"
+                  target="_blank"
+                  inList
+                >
+                  Werkenbij
                 </Link>
               </ListItem>
             </List>
@@ -135,11 +177,15 @@ const Footer1 = () => (
       </Row>
     </FooterTop>
     <FooterBottom>
-      <Link href="/" inList>
-        Privacy and cookies
+      <Link href="https://www.amsterdam.nl/privacy/" inList target="_blank">
+        Privacy
       </Link>
-      <Link href="/" inList>
-        About this site
+      <Link
+        href="https://www.amsterdam.nl/privacy/cookies-site/"
+        inList
+        target="_blank"
+      >
+        Cookies
       </Link>
     </FooterBottom>
   </Footer>

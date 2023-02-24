@@ -17,8 +17,6 @@ const CharacterComponent = (results: ICharacter) => {
           src={image}
           alt={`drawing of ${name}`}
           className="character__img"
-          width="300"
-          height="300"
         />
 
         <article className="character-component">
