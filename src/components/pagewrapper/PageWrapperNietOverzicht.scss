@@ -1,0 +1,28 @@
+.container {
+  //min-width: 820px;
+  max-width: 1400px;
+  background-color: $color-primary-white;
+  padding: 1rem 4rem;
+  margin: auto;
+
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); //hier zouden de cards smaller moeten worden
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 680px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}

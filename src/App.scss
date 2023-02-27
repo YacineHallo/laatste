@@ -1,7 +1,11 @@
+//extern
+@import "~@amsterdam/asc-assets/static/fonts/fonts.css";
+
 @import "./constants/scss_basic_var/Basics.scss";
 @import "./constants/scss_basic_var/Variables.scss";
 @import "./components/navigatie/Navigatie.scss";
 @import "./components/pagewrapper/PageWrapper.scss";
 @import "./components/paginationbuttons/PaginationButtons.scss";
 @import "./components/charactercomponent/CharacterComponent.scss";
-@import "~@amsterdam/asc-assets/static/fonts/fonts.css";
+@import "./components/pagewrapper/PageWrapperNietOverzicht.scss";
+@import "./views/characterdetailview/CharacterDetailView.scss";

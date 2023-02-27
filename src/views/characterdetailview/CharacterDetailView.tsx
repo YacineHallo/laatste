@@ -1,8 +1,9 @@
 import { ICharacter } from "../../types/IndexTypes";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
+import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
 import "../../App.scss";
+//import CharacterDetailComponent from "../../components/characterdetailcomponent/CharacterDetailComponent";
 
 export const CharacterDetailView = (results: ICharacter) => {
   let { id } = useParams();
@@ -30,27 +31,28 @@ export const CharacterDetailView = (results: ICharacter) => {
     getCharacter();
   }, []);
   return (
-    <PageWrapper isLoading={loading}>
-      <div className="main characterdetail-postion">
-        {character && (
-          <>
-            <h1>{character.name}</h1>
+    <PageWrappernietOverzicht isLoading={loading}>
+      {character && (
+        <div className="container">
+          <img src={character.image} alt="" className="container__img" />
+          <div className="character-detail">
+            <h1 className="character-detail__header">{character.name}</h1>
             <img
               src={character.image}
               alt={`drawing of ${character.name}`}
-              className="character__img"
+              className="character-detail__img"
               width="600"
               height="600"
             />
-            <ul>
+            <ul className="character-detail-component">
               <li>{id}</li>
-              <li>{character.status}</li>
-              <li>{character.species}</li>
-              <li>{character.gender}</li>
+              <li> Status: {character.status}</li>
+              <li> Species: {character.species}</li>
+              <li> Gender: {character.gender}</li>
             </ul>
-          </>
-        )}
-      </div>
-    </PageWrapper>
+          </div>
+        </div>
+      )}
+    </PageWrappernietOverzicht>
   );
 };

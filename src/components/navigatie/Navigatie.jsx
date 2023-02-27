@@ -1,8 +1,9 @@
 import React from "react";
 
 import { NavLink } from "react-router-dom";
+//import { SearchBarToggle } from "@amsterdam/asc-ui";
+//import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
 import { SearchBarToggle } from "@amsterdam/asc-ui";
-
 import "../../App.scss";
 
 export const Navigatie = () => {
@@ -52,11 +53,13 @@ export const Navigatie = () => {
               zoek
             </NavLink>
           </li>
-          <SearchBarToggle
-            align="left"
-            onOpen={function noRefCheck() {}}
-            onSubmit={function noRefCheck() {}}
-          />
+          <li className="navigation__item">
+            <SearchBarToggle
+              align="left"
+              onOpen={function noRefCheck() {}}
+              onSubmit={function noRefCheck() {}}
+            />
+          </li>
         </ul>
       </nav>
     </header>
