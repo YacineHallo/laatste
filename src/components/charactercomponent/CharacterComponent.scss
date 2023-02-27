@@ -1,64 +1,5 @@
 @import "../../constants/scss_basic_var/Variables.scss";
 
-// .character-detail {
-//   background-color: $color-neutral-grey-1;
-
-//   &__text {
-//     text-align: center;
-//   }
-
-//   &__figure {
-//     display: inline-block;
-//     vertical-align: top;
-//     position: relative;
-//     margin: 0.5em;
-//     font-size: 0.8em;
-//     background: white;
-//     overflow: hidden;
-//     //float: right;
-//     &__img {
-//       padding: $padding-default;
-//       width: 150px;
-//       height: 150px;
-//     }
-//   }
-
-//   &__eigenschap {
-//     list-style-type: none;
-//   }
-
-//   &__header {
-//     padding: $padding-default;
-//     text-align: center;
-//     font-size: $font-size-header;
-//   }
-//   &__footer {
-//     position: relative;
-
-//     &__img {
-//       width: 5rem;
-//       margin-left: 2rem;
-//     }
-//     &__kopen {
-//       text-align: center;
-//       padding: 1.5rem;
-//       width: 2rem;
-//       height: 1rem;
-//       background-color: $color-dark-blue;
-//       position: absolute;
-//       margin-left: 2rem;
-//       color: $color-primary-white;
-//       &__plus {
-//         font-weight: bolder;
-//         font-size: 2rem;
-//         padding-right: 1rem;
-//         position: absolute;
-//         top: 0rem;
-//         left: 1.5rem;
-//       }
-//     }
-//   }
-// }
 .border {
   border-bottom: 2px solid $color-neutral-grey-2;
   border-right: 2px solid $color-neutral-grey-2;
@@ -108,52 +49,25 @@
         font-weight: 700;
       }
     }
+  }
 
-    // .badge {
-    //   background-color: red;
-    //   color: black;
-    //   top: 10px;
-    //   right: 20px;
-    //   font-size: 17px;
-    //   position: absolute;
-    //   z-index: 0;
-    // }
-    .badge {
-      $type: status;
-      @if $type == "alive" {
-        color: pink;
-      } @else if $type == "dead" {
-        color: blue;
-      } @else {
-        color: green;
-      }
-    }
-
-    &__footer {
-      position: relative;
-
-      &__img {
-        width: 5rem;
-        margin-left: 2rem;
-      }
-      &__kopen {
-        text-align: center;
-        padding: 1.5rem;
-        width: 10rem;
-        height: 5rem;
-        background-color: $color-dark-blue;
-        position: absolute;
-        margin-left: 2rem;
-        color: $color-primary-white;
-        &__plus {
-          font-weight: bolder;
-          font-size: 4rem;
-          padding-right: 1rem;
-          position: absolute;
-          top: 0rem;
-          left: 1.5rem;
-        }
-      }
+  // .badge {
+  //   background-color: red;
+  //   color: black;
+  //   top: 10px;
+  //   right: 20px;
+  //   font-size: 17px;
+  //   position: absolute;
+  //   z-index: 0;
+  // }
+  .badge {
+    $type: status;
+    @if $type == "alive" {
+      color: pink;
+    } @else if $type == "dead" {
+      color: blue;
+    } @else {
+      color: green;
     }
   }
 }
