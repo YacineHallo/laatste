@@ -2,33 +2,37 @@
 
 .container {
   max-width: 1400px;
+  height: 1400px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   position: relative;
   &__img {
-    opacity: 0.3;
+    opacity: 0.8;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
 .character-detail {
   position: relative;
+  float: right;
+  margin-right: 10%;
 
-  width: 50em &__header {
+  &__header {
     font-size: $font-size-header;
     color: $color-primary-black;
-  }
-  &__img {
+    margin-bottom: 10%;
+    margin-top: 10%;
   }
 
   &-component {
     list-style-type: none;
     padding-bottom: 2rem;
     padding-left: 1rem;
+    font-size: $font-size-default;
   }
 }

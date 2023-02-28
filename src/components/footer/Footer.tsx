@@ -11,10 +11,10 @@ import {
   FooterTop
 } from "@amsterdam/asc-ui";
 import React from "react";
-import "../../App.scss";
+
 
 const Footer1 = () => (
-  <Footer>
+  <Footer className="container__footer">
     <FooterTop className="footer">
       <Row>
         <Column

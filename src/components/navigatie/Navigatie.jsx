@@ -50,7 +50,7 @@ export const Navigatie = () => {
         <ul className="navigation__zoek">
           <li className="navigation__item">
             <NavLink to="#" className="navigation__link">
-              zoek
+              yacine
             </NavLink>
           </li>
           <li className="navigation__item">

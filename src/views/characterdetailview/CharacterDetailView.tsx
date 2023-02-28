@@ -37,15 +37,14 @@ export const CharacterDetailView = (results: ICharacter) => {
           <img src={character.image} alt="" className="container__img" />
           <div className="character-detail">
             <h1 className="character-detail__header">{character.name}</h1>
-            <img
+            {/* <img
               src={character.image}
               alt={`drawing of ${character.name}`}
               className="character-detail__img"
               width="600"
               height="600"
-            />
+            /> */}
             <ul className="character-detail-component">
-              <li>{id}</li>
               <li> Status: {character.status}</li>
               <li> Species: {character.species}</li>
               <li> Gender: {character.gender}</li>
