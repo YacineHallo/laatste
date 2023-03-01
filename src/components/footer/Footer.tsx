@@ -12,7 +12,6 @@ import {
 } from "@amsterdam/asc-ui";
 import React from "react";
 
-
 const Footer1 = () => (
   <Footer className="container__footer">
     <FooterTop className="footer">
