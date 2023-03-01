@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState } from "react";
 //import { RadioComponent } from "../../components/formulierencomponenten/radiocomponent/RadioComponent";
 //import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
@@ -6,8 +7,8 @@ import { useState } from "react";
 //https://mui.com/
 //import "../../App.scss";
 import {
-  TextField,
   ErrorMessage,
+  TextField,
   FormTitle,
   Card,
   CardContent,
@@ -28,103 +29,131 @@ export const ContactViewJS = () => {
   const [straat, setStraat] = useState("");
   const [opmerking, setOpmerking] = useState("");
   const [woonplaats, setWoonplaats] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefoon, setTelefoon] = useState("");
 
   const handleSubmit = event => {
     event.preventDefault();
     alert(
-      `Opmerking: ${opmerking} Je naam is: ${voorletters} ${achternaam} en je woont  ${woonplaats}`
+      `Opmerking: ${opmerking} Uw naam is: ${voorletters} ${achternaam} Uw woont in: ${woonplaats} en dit is uw mailadres:${email} en telefoonnummer ${telefoon}`
     );
   };
 
   return (
-    <div className="main">
-      <FormTitle>
-        U kunt contact met ons opnemen middels dit formulierr
-      </FormTitle>
-      <Card maxWidth={500} backgroundColor="level2" shadow>
-        <CardContent>
-          <Heading as="h6">This is a card</Heading>
-          <Paragraph>
-            Mocht u een van deze characters aanstootgevend vinden, laat het ons
-            dan weten. Alle andere opmerkingen zijn ook welkom
-          </Paragraph>
-        </CardContent>
-      </Card>
+    <div className="container__form">
       <form onSubmit={handleSubmit} className="main">
-        <fieldset>
-          <TextArea
-            label="Opmerking"
-            type="text"
-            value={opmerking}
-            placeholder="Vul hier uw  opmerking in"
-            onChange={e => setOpmerking(e.target.value)}
-          />
+        <FormTitle>
+          U kunt contact met ons opnemen middels dit formulierr
+        </FormTitle>
+        <Card maxWidth={500} backgroundColor="level2" shadow>
+          <CardContent className="container__form__input">
+            <Heading as="h6">This is a card</Heading>
+            <Paragraph>
+              Mocht u een van deze characters aanstootgevend vinden, laat het
+              ons dan weten. Alle andere opmerkingen zijn ook welkom
+            </Paragraph>
+          </CardContent>
+        </Card>
 
-          <TextField
-            label="Voorletters"
-            type="text"
-            value={voorletters}
-            placeholder="Vul hier uw  voorletters in"
-            onChange={e => setVoorletters(e.target.value)}
-          />
+        <p className="container__form__label">Opmerkingen</p>
+        <TextArea
+          className="container__form__input"
+          label="Opmerking"
+          type="text"
+          value={opmerking}
+          placeholder="Vul hier uw  opmerking in"
+          onChange={e => setOpmerking(e.target.value)}
+        />
 
-          <TextField
-            label="Achternaam"
-            required
-            type="text"
-            value={achternaam}
-            placeholder="Vul hier uw achternaam in"
-            onChange={e => setAchternaam(e.target.value)}
-          />
-          <ErrorMessage message="Error message" />
-        </fieldset>
-        <fieldset>
-          <>
-            <RadioGroup name="woonplaats">
-              <Label htmlFor="Amsterdam" label="Amsterdam">
-                <Radio
-                  id="Amsterdam"
-                  checked={woonplaats === "Amsterdam"}
-                  value="Amsterdam"
-                  onClick={() => setWoonplaats("Amsterdam")}
-                />
-              </Label>
-              <Label htmlFor="Weesp" label="Weesp">
-                <Radio
-                  id="Weesp"
-                  checked={woonplaats === "Weesp"}
-                  value="Weesp"
-                  onClick={() => setWoonplaats("Weesp")}
-                />
-              </Label>
+        <TextField
+          className="container__form__input"
+          label="Voorletters"
+          type="text"
+          value={voorletters}
+          placeholder="Vul hier uw  voorletters in"
+          onChange={e => setVoorletters(e.target.value)}
+        />
 
-              <Label htmlFor="Anders" label="Anders">
-                <Radio
-                  id="Anders"
-                  checked={woonplaats === "Anders"}
-                  value="Anders"
-                  onClick={() => setWoonplaats("Anders")}
-                />
-              </Label>
-            </RadioGroup>
-          </>
-
-          <div>
-            <TextField
-              label="Straat"
-              error
-              value={straat}
-              required
-              type="nr"
-              name="woonplaats"
-              onChange={e => setStraat(e.target.value)}
-              placeholder="Vul hier uw straat in"
+        <TextField
+          className="container__form__input"
+          label="Achternaam"
+          required
+          type="text"
+          value={achternaam}
+          placeholder="Vul hier uw achternaam in"
+          onChange={e => setAchternaam(e.target.value)}
+        />
+        <p className="container__form__label"> Woonplaats </p>
+        <RadioGroup
+          name="woonplaats"
+          required
+          error
+          className="container__form__input"
+        >
+          <Label htmlFor="Amsterdam" label="Amsterdam">
+            <Radio
+              id="Amsterdam"
+              checked={woonplaats === "Amsterdam"}
+              value="Amsterdam"
+              onClick={() => setWoonplaats("Amsterdam")}
             />
+          </Label>
+          <Label htmlFor="Weesp" label="Weesp">
+            <Radio
+              id="Weesp"
+              checked={woonplaats === "Weesp"}
+              value="Weesp"
+              onClick={() => setWoonplaats("Weesp")}
+            />
+          </Label>
 
-            <ErrorMessage message="Error message" />
-          </div>
-        </fieldset>
-        <input type="submit" />
+          <Label htmlFor="Anders" label="Anders">
+            <Radio
+              id="Anders"
+              checked={woonplaats === "Anders"}
+              value="Anders"
+              onClick={() => setWoonplaats("Anders")}
+            />
+          </Label>
+        </RadioGroup>
+
+        <ErrorMessage
+          onClick={() => {
+            if (setWoonplaats === "") {
+              message = "Maak een keuze";
+            }
+          }}
+        />
+
+        <TextField
+          className="container__form__input"
+          label="Straat"
+          value={straat}
+          type="text"
+          name="woonplaats"
+          onChange={e => setStraat(e.target.value)}
+          placeholder="Vul hier uw straat in"
+        />
+        <TextField
+          className="container__form__input"
+          label="Email"
+          required
+          value={email}
+          type="email"
+          name="woonplaats"
+          onChange={e => setEmail(e.target.value)}
+          placeholder="Vul hier uw emailadres in"
+        />
+        <TextField
+          className="container__form__input"
+          label="Telefoonnummer"
+          value={telefoon}
+          type="tel"
+          name="telefoon"
+          onChange={e => setTelefoon(e.target.value)}
+          placeholder="Vul hier uw telefoonnummer in"
+        />
+        <input type="submit" className="container__form__btn" />
       </form>
     </div>
   );
