@@ -41,7 +41,7 @@ export const ContactViewJS = () => {
 
   return (
     <div className="container__form">
-      <form onSubmit={handleSubmit} className="main">
+      <form onSubmit={handleSubmit} className="main" id="contactForm">
         <FormTitle className="container__form__input">
           U kunt contact met ons opnemen middels dit formulier
         </FormTitle>
@@ -121,7 +121,7 @@ export const ContactViewJS = () => {
 
         <ErrorMessage
           onClick={() => {
-            if (setWoonplaats === "") {
+            if (id === "") {
               message = "Maak een keuze";
             }
           }}
@@ -156,6 +156,12 @@ export const ContactViewJS = () => {
           placeholder="Vul hier uw telefoonnummer in"
         />
         <input type="submit" className="container__form__btn" />
+        <input
+          type="reset"
+          onclick="resetForm()"
+          value="Reset form"
+          className="container__form__btn container__form__btn__transparant"
+        />
       </form>
     </div>
   );
