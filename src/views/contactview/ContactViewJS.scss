@@ -51,6 +51,7 @@
   }
   &__btn {
     background: $color-primary-red;
+    opacity: 0.5;
     border: 1px solid $color-primary-red;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
@@ -61,5 +62,13 @@
     font-size: $font-size-logo;
     padding: 1.2rem 1.4rem;
     margin: 1rem 5rem;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02) perspective(0px);
+      box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
+    }
+    @media screen and (max-width: 875px) {
+      padding: 0.8rem 1rem;
+    }
   }
 }
