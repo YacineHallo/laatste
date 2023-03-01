@@ -42,8 +42,8 @@ export const ContactViewJS = () => {
   return (
     <div className="container__form">
       <form onSubmit={handleSubmit} className="main">
-        <FormTitle>
-          U kunt contact met ons opnemen middels dit formulierr
+        <FormTitle className="container__form__input">
+          U kunt contact met ons opnemen middels dit formulier
         </FormTitle>
         <Card maxWidth={500} backgroundColor="level2" shadow>
           <CardContent className="container__form__input">
@@ -59,6 +59,7 @@ export const ContactViewJS = () => {
         <TextArea
           className="container__form__input"
           label="Opmerking"
+          required
           type="text"
           value={opmerking}
           placeholder="Vul hier uw  opmerking in"
@@ -68,6 +69,7 @@ export const ContactViewJS = () => {
         <TextField
           className="container__form__input"
           label="Voorletters"
+          required
           type="text"
           value={voorletters}
           placeholder="Vul hier uw  voorletters in"
