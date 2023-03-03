@@ -53,6 +53,15 @@
       &__eigenschap {
         list-style-type: none;
         font-weight: 700;
+        &__dead {
+          color: green;
+        }
+        &__alive {
+          color: red;
+        }
+        &__unknown {
+          color: blue;
+        }
       }
     }
   }
@@ -66,14 +75,14 @@
   //   position: absolute;
   //   z-index: 0;
   // }
-  .badge {
-    $type: status;
-    @if $type == "alive" {
-      color: pink;
-    } @else if $type == "dead" {
-      color: blue;
-    } @else {
-      color: green;
-    }
-  }
+  // .badge {
+  //   $type: status;
+  //   @if $type == "alive" {
+  //     color: pink;
+  //   } @else if $type == "dead" {
+  //     color: blue;
+  //   } @else {
+  //     color: green;
+  //   }
+  // }
 }
