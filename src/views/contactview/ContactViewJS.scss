@@ -1,5 +1,5 @@
 .container__form {
-  max-width: 1400px;
+  max-width: $max-width-max;
   max-height: 1200px;
   display: grid;
   grid-template-columns: 1fr, 3fr, 1fr;
@@ -9,13 +9,13 @@
   padding: 1rem 4rem;
   margin: auto;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: $max-width-normal) {
     grid-template-columns: 1fr, 3fr, 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $max-width-medium) {
     grid-template-columns: 1fr, 3fr, 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
@@ -24,7 +24,7 @@
     }
   }
 
-  @media screen and (max-width: 875px) {
+  @media screen and (max-width: $max-width-small) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     margin-left: 0;

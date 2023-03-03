@@ -10,6 +10,8 @@ interface IPageWrapperProps {
 
 export const PageWrapper = ({ isLoading, children }: IPageWrapperProps) => {
   return (
-    <div className="container__main">{isLoading ? <Spinner /> : children}</div>
+    <div className="container__main">
+      {isLoading ? <Spinner className="spinner" /> : children}
+    </div>
   );
 };
