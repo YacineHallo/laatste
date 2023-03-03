@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: #e6e6e6;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 1400px;
+  margin: 0 auto;
+}/*# sourceMappingURL=Basics.css.map */

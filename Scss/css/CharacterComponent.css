@@ -1,0 +1,45 @@
+.border {
+  border-bottom: 2px solid #b4b4b4;
+  border-right: 2px solid #b4b4b4;
+}
+.border:hover {
+  border-bottom: 2px solid #ec0000;
+  border-right: 2px solid #ec0000;
+  cursor: pointer;
+}
+.border .character {
+  background-color: #e6e6e6;
+}
+.border .character__text {
+  text-align: center;
+  text-decoration: dotted;
+  font-size: 1.8rem;
+}
+.border .character__img {
+  padding: 1rem;
+  width: 30rem;
+  height: 30rem;
+}
+.border .character__header {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #e50082;
+}
+.border .character-component {
+  list-style-type: none;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+.border .character-component :hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+  list-style-type: none;
+}
+.border .character-component__eigenschap {
+  list-style-type: none;
+  font-weight: 700;
+}
+.border .badge {
+  color: green;
+}/*# sourceMappingURL=CharacterComponent.css.map */

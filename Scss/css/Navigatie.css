@@ -1,0 +1,114 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: #e6e6e6;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 99;
+}
+.header__logo {
+  width: 20rem;
+  padding-bottom: 2rem;
+  padding-left: 10rem;
+}
+.header__logo .logo__img {
+  height: 6.8rem;
+  padding-left: 2rem;
+}
+.header__logo .logotexts {
+  display: inline-block;
+  position: absolute;
+}
+.header__logo .logotexts .logotext {
+  display: block;
+  color: red;
+  font-size: 2.3rem;
+  font-weight: bolder;
+  padding-left: 3rem;
+}
+
+.header__nav {
+  background-color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navigation__list,
+.navigation__zoek {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+.navigation__list .navigation__item,
+.navigation__zoek .navigation__item {
+  padding: 1rem;
+}
+.navigation__list .navigation__link,
+.navigation__zoek .navigation__link {
+  text-decoration: none;
+  color: #323232;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: all 500ms ease;
+}
+.navigation__list .navigation__link:hover,
+.navigation__zoek .navigation__link:hover {
+  color: #ec0000;
+}
+.navigation__list .navigation__link:active,
+.navigation__zoek .navigation__link:active {
+  text-decoration: underline;
+  color: black;
+}
+
+.navigation__zoek {
+  padding: 1.5rem 10rem 1.5rem 0;
+}
+.navigation__zoek .navigation__zoek__img {
+  width: 4.4rem;
+  height: 4.4rem;
+}
+.navigation__zoek .navigation__zoek__img:hover {
+  background-color: #ec0000;
+  background-image: url(https://amsterdam.nl/views/core/images/svg/close-icon-white.svg);
+}
+
+.navigation__list {
+  padding: 1.5rem 0 1.5rem 17.5rem;
+}/*# sourceMappingURL=Navigatie.css.map */
