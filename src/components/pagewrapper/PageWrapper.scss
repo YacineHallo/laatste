@@ -31,10 +31,14 @@
 //     margin: auto;
 //   }
 // }
+.spinner {
+  max-width: 50%;
+  max-height: 50%;
+}
 
 .container__main {
   //min-width: 820px;
-  max-width: 1400px;
+  max-width: $max-width-max;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -43,13 +47,13 @@
   padding: 1rem 4rem;
   margin: auto;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: $max-width-normal) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $max-width-medium) {
     grid-template-columns: repeat(
       2,
       1fr
@@ -58,8 +62,9 @@
     gap: 1.5rem;
   }
 
-  @media screen and (max-width: 690px) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr 1fr;
+  @media screen and (max-width: $max-width-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: auto;
   } //moet nog iest met lettergrootte
 }

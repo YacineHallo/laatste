@@ -8,8 +8,11 @@
   align-items: center;
   background-color: $color-primary-white;
   margin: auto;
-  @media screen and (max-width: 819px) {
+  @media screen and (max-width: $max-width-medium) {
     justify-content: center;
+  }
+  @media screen and (max-width: $max-width-extrasmall) {
+    justify-content: left;
   }
 }
 

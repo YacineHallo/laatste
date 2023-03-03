@@ -2,7 +2,15 @@
 //Is het scherm breder dan 1920 pixels, dan houden de kolommen de maximale breedte van 117pixels. De ruimte links en rechts van de kolommen is wit.
 //De visuele stijl vraagt om veel witruimte. De verticale ruimte tussen elementen is altijd een veelvoud van 8 px.
 
+//REPONSIVE
+$max-width-extrasmall: 530px; //alleen bij pagination
+$max-width-small: 690px;
+$max-width-medium: 1000px;
+$max-width-normal: 1300px;
+$max-width-max: 1400px;
+
 //FONTS  let op in _basis.css is opgenomen dat 1 rem 10px is ipv 16px
+
 $font-size-default: 1.6rem;
 $font-size-logo: 2.3rem;
 $font-size-header: 1.8rem;
