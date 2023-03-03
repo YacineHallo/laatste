@@ -158,6 +158,8 @@ export const ContactViewJS = () => {
         <input type="submit" className="container__form__btn" />
         <input
           type="reset"
+          patterd="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
           onclick="resetForm()"
           value="Reset form"
           className="container__form__btn container__form__btn__transparant"
