@@ -8,6 +8,9 @@
   align-items: center;
   background-color: $color-primary-white;
   margin: auto;
+  &__pagenumber {
+    color: $color-secundair-magenta;
+  }
   @media screen and (max-width: $max-width-medium) {
     justify-content: center;
   }

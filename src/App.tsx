@@ -8,6 +8,7 @@ import { Navigatie } from "./components/navigatie/Navigatie";
 import Footer1 from "./components/footer/Footer";
 import { CharacterDetailView } from "./views/characterdetailview/CharacterDetailView";
 import { ContactViewJS } from "./views/contactview/ContactViewJS";
+import { SearchView } from "./views/searchview/SearchView";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           path="/characters/:id"
         />
         <Route element={<ContactViewJS />} path="/contact" />
+        <Route element={<SearchView />} path="/zoekresultaat" />
       </Routes>
       <Footer1 />
     </div>

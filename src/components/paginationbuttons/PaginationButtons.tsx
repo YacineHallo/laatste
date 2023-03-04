@@ -18,7 +18,7 @@ export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
           Prev
         </button>
       )}
-
+      <p className="pagination__pagenumber">Page {pageNumber}</p>
       <button onClick={next} className="button-pagination">
         Next
       </button>

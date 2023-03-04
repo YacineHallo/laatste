@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 //import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
 import { SearchBarToggle } from "@amsterdam/asc-ui";
 import "../../App.scss";
+import { SearchComponent } from "../searchcomponent/SearchComponent";
 
 export const Navigatie = () => {
   return (
@@ -36,7 +37,7 @@ export const Navigatie = () => {
             </NavLink>
           </li>
           <li className="navigation__item">
-            <NavLink to="#" className="navigation__link">
+            <NavLink to="/zoekresultaat" className="navigation__link">
               Location
             </NavLink>
           </li>
@@ -49,9 +50,7 @@ export const Navigatie = () => {
 
         <ul className="navigation__zoek">
           <li className="navigation__item">
-            <NavLink to="#" className="navigation__link">
-              Yacine
-            </NavLink>
+            <SearchComponent />
           </li>
           <li className="navigation__item">
             <SearchBarToggle

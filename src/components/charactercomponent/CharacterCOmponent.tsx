@@ -26,27 +26,7 @@ const CharacterComponent = (results: ICharacter) => {
               Species: {species}
             </li>
             <CharacterStatusComponent status={status} />
-            {/* {(() => {
-              if (status === "Dead") {
-                return (
-                  <li className="character-component__eigenschap__dead hover">
-                    Status: {status}
-                  </li>
-                );
-              } else if (status === "Alive") {
-                return (
-                  <li className="character-component__eigenschap__alive hover ">
-                    Status: {status}
-                  </li>
-                );
-              } else {
-                return (
-                  <li className="character-component__eigenschap__unknown hover">
-                    Status: {status}
-                  </li>
-                );
-              }
-            })()} */}
+
             <li className="character-component__eigenschap hover">
               Gender: {gender}
             </li>
