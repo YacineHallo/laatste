@@ -3,6 +3,7 @@
 import "../../App.scss";
 import { ICharacter } from "../../types/IndexTypes";
 import { useNavigate } from "react-router-dom";
+import { CharacterStatusComponent } from "./characterstatuscomponent/CharacterStatusComponent";
 
 const CharacterComponent = (results: ICharacter) => {
   const { id, image, name, status, species, gender } = results;
@@ -24,7 +25,8 @@ const CharacterComponent = (results: ICharacter) => {
             <li className="character-component__eigenschap hover">
               Species: {species}
             </li>
-            {(() => {
+            <CharacterStatusComponent status={status} />
+            {/* {(() => {
               if (status === "Dead") {
                 return (
                   <li className="character-component__eigenschap__dead hover">
@@ -44,7 +46,7 @@ const CharacterComponent = (results: ICharacter) => {
                   </li>
                 );
               }
-            })()}
+            })()} */}
             <li className="character-component__eigenschap hover">
               Gender: {gender}
             </li>
