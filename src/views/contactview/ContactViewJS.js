@@ -54,7 +54,6 @@ export const ContactViewJS = () => {
             </Paragraph>
           </CardContent>
         </Card>
-
         <p className="container__form__label">Opmerkingen</p>
         <TextArea
           className="container__form__input"
@@ -65,7 +64,6 @@ export const ContactViewJS = () => {
           placeholder="Vul hier uw  opmerking in"
           onChange={e => setOpmerking(e.target.value)}
         />
-
         <TextField
           className="container__form__input"
           label="Voorletters"
@@ -75,7 +73,6 @@ export const ContactViewJS = () => {
           placeholder="Vul hier uw  voorletters in"
           onChange={e => setVoorletters(e.target.value)}
         />
-
         <TextField
           className="container__form__input"
           label="Achternaam"
@@ -86,47 +83,40 @@ export const ContactViewJS = () => {
           onChange={e => setAchternaam(e.target.value)}
         />
         <p className="container__form__label"> Woonplaats </p>
-        <RadioGroup
-          name="woonplaats"
-          required
-          error
-          className="container__form__input"
-        >
-          <Label htmlFor="Amsterdam" label="Amsterdam">
-            <Radio
-              id="Amsterdam"
-              checked={woonplaats === "Amsterdam"}
-              value="Amsterdam"
-              onClick={() => setWoonplaats("Amsterdam")}
-            />
-          </Label>
-          <Label htmlFor="Weesp" label="Weesp">
-            <Radio
-              id="Weesp"
-              checked={woonplaats === "Weesp"}
-              value="Weesp"
-              onClick={() => setWoonplaats("Weesp")}
-            />
-          </Label>
+        <>
+          <RadioGroup
+            name="woonplaats"
+            error
+            className="container__form__input"
+          >
+            <Label htmlFor="Amsterdam" label="Amsterdam">
+              <Radio
+                id="Amsterdam"
+                checked={woonplaats === "Amsterdam"}
+                value="Amsterdam"
+                onClick={() => setWoonplaats("Amsterdam")}
+              />
+            </Label>
+            <Label htmlFor="Weesp" label="Weesp">
+              <Radio
+                id="Weesp"
+                checked={woonplaats === "Weesp"}
+                value="Weesp"
+                onClick={() => setWoonplaats("Weesp")}
+              />
+            </Label>
 
-          <Label htmlFor="Anders" label="Anders">
-            <Radio
-              id="Anders"
-              checked={woonplaats === "Anders"}
-              value="Anders"
-              onClick={() => setWoonplaats("Anders")}
-            />
-          </Label>
-        </RadioGroup>
-
-        <ErrorMessage
-          onClick={() => {
-            if (id === "") {
-              message = "Maak een keuze";
-            }
-          }}
-        />
-
+            <Label htmlFor="Anders" label="Anders">
+              <Radio
+                id="Anders"
+                checked={woonplaats === "Anders"}
+                value="Anders"
+                onClick={() => setWoonplaats("Anders")}
+              />
+            </Label>
+          </RadioGroup>
+          <ErrorMessage message="maak een keuze" />
+        </>
         <TextField
           className="container__form__input"
           label="Straat"
@@ -152,17 +142,17 @@ export const ContactViewJS = () => {
           value={telefoon}
           type="tel"
           name="telefoon"
+          patterd="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           onChange={e => setTelefoon(e.target.value)}
           placeholder="Vul hier uw telefoonnummer in"
         />
         <input type="submit" className="container__form__btn" />
         <input
           type="reset"
-          patterd="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          required
-          onclick="resetForm()"
-          value="Reset form"
-          className="container__form__btn container__form__btn__transparant"
+          onclick="this.value=''"
+          value="reset"
+          className="container__form__btn
+        container__form__btn__transparant"
         />
       </form>
     </div>
