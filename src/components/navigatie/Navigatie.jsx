@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-//import { SearchBarToggle } from "@amsterdam/asc-ui";
+
 //import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
 import { SearchBarToggle } from "@amsterdam/asc-ui";
 import "../../App.scss";
