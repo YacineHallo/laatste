@@ -10,6 +10,7 @@ import { CharacterDetailView } from "./views/characterdetailview/CharacterDetail
 import { ContactViewJS } from "./views/contactview/ContactViewJS";
 import { SearchView } from "./views/searchview/SearchView";
 import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
+import { LocatieView } from "./views/locatieview/LocatieView";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route element={<ContactViewJS />} path="/contact" />
         <Route element={<SearchView />} path="/zoekresultaat" />
         <Route element={<EpisodeView />} path="/episode" />
+        <Route element={<LocatieView />} path="/locatie" />
       </Routes>
       <Footer1 />
     </div>

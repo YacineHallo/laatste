@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
-import EpisodeComponent from "../../components/episodecomponent/EpisodeComponent";
-import { IEpisode, IEpisodesResponse } from "../../types/IndexTypes";
+import LocatieComponent from "../../components/locatiecomponent/LocatieComponent";
+import { ILocation, ILocationsResponse } from "../../types/IndexTypes";
 import { PaginationButtons } from "../../components/paginationbuttons/PaginationButtons";
 
-export const EpisodeView = () => {
-  const [episode, setEpisode] = useState<IEpisode[]>([]);
+export const LocatieView = () => {
+  const [location, getLocation] = useState<ILocation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const getEpisodes = async (newPage?: number) => {
+  const getLocations = async (newPage?: number) => {
     setLoading(true);
     try {
       const api = process.env.REACT_APP_API_URL;
-      const res = await await fetch(`${api}/episode/?page=${newPage}`);
-      const resJson: IEpisodesResponse = await res.json();
+      const res = await await fetch(`${api}/location/?page=${newPage}`);
+      const resJson: ILocationsResponse = await res.json();
       console.log("res ", resJson);
       //@ts-ignore
-      setEpisode(resJson.results);
+      getLocation(resJson.results);
     } catch (error) {
       console.log("oeps   ", error);
     } finally {
@@ -26,7 +26,7 @@ export const EpisodeView = () => {
   };
 
   useEffect(() => {
-    getEpisodes(pageNumber);
+    getLocations(pageNumber);
   }, [pageNumber]);
   return (
     <>
@@ -35,8 +35,8 @@ export const EpisodeView = () => {
         setPageNumber={setPageNumber}
       />
       <PageWrapper isLoading={loading}>
-        {episode.map((perEpisode: JSX.IntrinsicAttributes & IEpisode) => (
-          <EpisodeComponent {...perEpisode} key={perEpisode.id} />
+        {location.map((perLocation: JSX.IntrinsicAttributes & ILocation) => (
+          <LocatieComponent {...perLocation} key={perLocation.id} />
         ))}{" "}
       </PageWrapper>
     </>

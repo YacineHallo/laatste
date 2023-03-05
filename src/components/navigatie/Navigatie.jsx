@@ -34,6 +34,11 @@ export const Navigatie = () => {
             </NavLink>
           </li>
           <li className="navigation__item">
+            <NavLink to="/locatie" className="navigation__link">
+              Locaties
+            </NavLink>
+          </li>
+          <li className="navigation__item">
             <NavLink to="/zoekresultaat" className="navigation__link">
               Zoeken
             </NavLink>
