@@ -14,7 +14,9 @@ export const SearchView = () => {
     setLoading(true);
     try {
       const api = process.env.REACT_APP_API_URL; //deze .env plaats je in de mappenstructuur op rootniveau
-      const res = await await fetch(`${api}/?page=${newPage}&name=${search}`);
+      const res = await await fetch(
+        `${api}/character/?page=${newPage}&name=${search}`
+      );
       const resJson: ICharactersResponse = await res.json();
       console.log("res ", resJson);
       //@ts-ignore

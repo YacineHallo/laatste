@@ -15,7 +15,7 @@ export const CharacterDetailView = (results: ICharacter) => {
     setLoading(true);
     try {
       const api = process.env.REACT_APP_API_URL; //deze .env plaats je in de mappenstructuur op rootniveau
-      const res = await fetch(`${api}/${id}`);
+      const res = await fetch(`${api}/character/${id}`);
       const resJson: ICharacter = await res.json();
       console.log("res ", resJson);
 
