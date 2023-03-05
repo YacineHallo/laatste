@@ -35,7 +35,9 @@ export const SearchView = () => {
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
       />
-      <SearchComponent setSearch={setSearch} setPageNumber={setPageNumber} />
+      <div className="container__main">
+        <SearchComponent setSearch={setSearch} setPageNumber={setPageNumber} />
+      </div>
       <PageWrapper isLoading={loading}>
         {character.map((perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
           <CharacterComponent {...perCharacter} key={perCharacter.id} />

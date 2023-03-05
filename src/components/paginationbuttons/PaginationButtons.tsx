@@ -11,6 +11,8 @@ export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
   let next = () => {
     setPageNumber(pageNumber + 1);
   };
+  //bij onclick next moet er voor zoeken geen knop next meer komen wanneer er minder dan 20
+
   return (
     <div className="pagination">
       {pageNumber > 1 && (
@@ -19,7 +21,7 @@ export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
         </button>
       )}
       <p className="pagination__pagenumber">Page {pageNumber}</p>
-      <button onClick={next} className="button-pagination">
+      <button className="button-pagination" onClick={next}>
         Next
       </button>
     </div>

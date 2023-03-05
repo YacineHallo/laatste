@@ -1,11 +1,8 @@
-import React from "react";
-
 import { NavLink } from "react-router-dom";
 //import { SearchBarToggle } from "@amsterdam/asc-ui";
 //import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
 import { SearchBarToggle } from "@amsterdam/asc-ui";
 import "../../App.scss";
-import { SearchComponent } from "../searchcomponent/SearchComponent";
 
 export const Navigatie = () => {
   return (
@@ -49,9 +46,6 @@ export const Navigatie = () => {
         </ul>
 
         <ul className="navigation__zoek">
-          <li className="navigation__item">
-            <SearchComponent />
-          </li>
           <li className="navigation__item">
             <SearchBarToggle
               align="left"
