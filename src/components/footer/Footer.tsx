@@ -26,11 +26,16 @@ const Footer1 = () => (
             xLarge: 4
           }}
         >
-          <FooterSection title="Some page links">
+          <FooterSection title="Amsterdamse Website">
             <List>
               <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum.
+                <Link
+                  darkBackground
+                  href="https://amsterdam.nl"
+                  inList
+                  target="_blank"
+                >
+                  Website van Amsterdam
                 </Link>
               </ListItem>
               <ListItem>
@@ -155,6 +160,7 @@ const Footer1 = () => (
               <p>
                 Mijn mailadres:{" "}
                 <a href="mailto:y.hesseling@amsterdam.nl">email</a>
+                &nbsp; y.hesseling@amsterdam.nl
               </p>
             </Paragraph>
           </FooterSection>
