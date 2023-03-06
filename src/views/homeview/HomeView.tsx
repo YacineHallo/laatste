@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
 import CharacterComponent from "../../components/charactercomponent/CharacterCOmponent";
-import { ICharacter, ICharactersResponse } from "../../types/IndexTypes";
+import { ICharacter, ICharactersResponse, IInfo } from "../../types/IndexTypes";
 import { PaginationButtons } from "../../components/paginationbuttons/PaginationButtons";
 
 export const HomeView = () => {
-  const [character, setCharacter] = useState<ICharacter[]>([]);
+  const [character, setCharacter] = useState<ICharactersResponse>();
   const [loading, setLoading] = useState<boolean>(true);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -16,8 +16,7 @@ export const HomeView = () => {
       const res = await await fetch(`${api}/character/?page=${newPage}`);
       const resJson: ICharactersResponse = await res.json();
       console.log("res ", resJson);
-      //@ts-ignore
-      setCharacter(resJson.results);
+      setCharacter(resJson);
     } catch (error) {
       console.log("oeps   ", error);
     } finally {
@@ -33,11 +32,14 @@ export const HomeView = () => {
       <PaginationButtons
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
+        totalPages={character?.info.pages}
       />
       <PageWrapper isLoading={loading}>
-        {character.map((perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
-          <CharacterComponent {...perCharacter} key={perCharacter.id} />
-        ))}{" "}
+        {character?.results.map(
+          (perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
+            <CharacterComponent {...perCharacter} key={perCharacter.id} />
+          )
+        )}{" "}
       </PageWrapper>
     </>
   );

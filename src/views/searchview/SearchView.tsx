@@ -5,7 +5,7 @@ import { ICharacter, ICharactersResponse } from "../../types/IndexTypes";
 import { PaginationButtons } from "../../components/paginationbuttons/PaginationButtons";
 import { SearchComponent } from "../../components/searchcomponent/SearchComponent";
 export const SearchView = () => {
-  const [character, setCharacter] = useState([]);
+  const [character, setCharacter] = useState<ICharactersResponse>();
   const [loading, setLoading] = useState<boolean>(true);
   const [pageNumber, setPageNumber] = useState(1);
   const [search, setSearch] = useState("");
@@ -19,8 +19,7 @@ export const SearchView = () => {
       );
       const resJson: ICharactersResponse = await res.json();
       console.log("res ", resJson);
-      //@ts-ignore
-      setCharacter(resJson.results);
+      setCharacter(resJson);
     } catch (e) {
       console.log("oeps   ", e);
     } finally {
@@ -36,14 +35,17 @@ export const SearchView = () => {
       <PaginationButtons
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
+        totalPages={character?.info.pages}
       />
       <div className="container__main">
         <SearchComponent setSearch={setSearch} setPageNumber={setPageNumber} />
       </div>
       <PageWrapper isLoading={loading}>
-        {character.map((perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
-          <CharacterComponent {...perCharacter} key={perCharacter.id} />
-        ))}{" "}
+        {character?.results.map(
+          (perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
+            <CharacterComponent {...perCharacter} key={perCharacter.id} />
+          )
+        )}{" "}
       </PageWrapper>
     </>
   );

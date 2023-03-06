@@ -4,7 +4,15 @@ import "../../App.scss";
 //import { Pagination } from "@amsterdam/asc-ui";
 
 //@ts-ignore
-export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
+export const PaginationButtons = ({
+  totalPages = 999,
+  pageNumber,
+  setPageNumber
+}: {
+  totalPages?: number;
+  pageNumber: number;
+  setPageNumber: (number: number) => void;
+}) => {
   let prev = () => {
     setPageNumber(pageNumber - 1);
   };
@@ -23,9 +31,12 @@ export const PaginationButtons = ({ pageNumber, setPageNumber }) => {
           </button>
         )}
         <p className="pagination__pagenumber">Page {pageNumber}</p>
-        <button className="button-pagination" onClick={next}>
-          Next
-        </button>
+
+        {pageNumber < totalPages && (
+          <button className="button-pagination" onClick={next}>
+            Next
+          </button>
+        )}
       </div>
 
       {/* <Pagination

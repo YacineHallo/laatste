@@ -5,7 +5,7 @@ import { ILocation, ILocationsResponse } from "../../types/IndexTypes";
 import { PaginationButtons } from "../../components/paginationbuttons/PaginationButtons";
 
 export const LocatieView = () => {
-  const [location, getLocation] = useState<ILocation[]>([]);
+  const [location, getLocation] = useState<ILocationsResponse>();
   const [loading, setLoading] = useState<boolean>(true);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -16,8 +16,7 @@ export const LocatieView = () => {
       const res = await await fetch(`${api}/location/?page=${newPage}`);
       const resJson: ILocationsResponse = await res.json();
       console.log("res ", resJson);
-      //@ts-ignore
-      getLocation(resJson.results);
+      getLocation(resJson);
     } catch (error) {
       console.log("oeps   ", error);
     } finally {
@@ -33,11 +32,15 @@ export const LocatieView = () => {
       <PaginationButtons
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
+        totalPages={location?.info.pages}
       />
+
       <PageWrapper isLoading={loading}>
-        {location.map((perLocation: JSX.IntrinsicAttributes & ILocation) => (
-          <LocatieComponent {...perLocation} key={perLocation.id} />
-        ))}{" "}
+        {location?.results.map(
+          (perLocation: JSX.IntrinsicAttributes & ILocation) => (
+            <LocatieComponent {...perLocation} key={perLocation.id} />
+          )
+        )}{" "}
       </PageWrapper>
     </>
   );
