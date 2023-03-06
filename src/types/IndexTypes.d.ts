@@ -7,24 +7,17 @@ export type { ILocation } from "./LocationTypes";
 export { IEpisode } from "./EpisodeTypes";
 
 export interface ICharactersResponse {
-  results(results: any): unknown;
-  characters: {
-    info: IInfo;
-    results: ICharacter[];
-  };
+  info: IInfo;
+  results: ICharacter[];
 }
 export interface ILocationsResponse {
-  locations: {
-    info: IInfo;
-    results: ILocation[];
-  };
+  info: IInfo;
+  results: ILocation[];
 }
 
 export interface IEpisodesResponse {
-  episodes: {
-    info: IInfo;
-    results: IEpisode[];
-  };
+  info: IInfo;
+  results: IEpisode[];
 }
 
 export interface ICharacterFullData extends ICharacter {
