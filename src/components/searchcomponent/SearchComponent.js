@@ -5,13 +5,13 @@ import "../../App.scss";
 //@ts-ignore
 export const SearchComponent = ({ setSearch, setPageNumber }) => {
   return (
-    <form action="">
+    <form action="" className="container-zoek">
       <input
         onChange={e => {
           setPageNumber(1);
           setSearch(e.target.value);
         }}
-        placeholder="Zoek Characters op naam"
+        placeholder="Zoek characters op naam"
         type="text"
         className="input"
       />
@@ -20,11 +20,25 @@ export const SearchComponent = ({ setSearch, setPageNumber }) => {
           onClick={e => {
             e.preventDefault();
           }}
-          className="btn"
+          className="button-search"
         >
-          Search
+          Zoek
         </button>
       </NavLink>
+      <NavLink to="/zoekresultaat" className="navigation__link">
+        <button type="reset" className="button-search">
+          Leeg
+        </button>
+      </NavLink>
+
+      {/* <button
+        type="reset"
+        onChange={e => {
+          setPageNumber(1);
+        }}
+      >
+        clear
+      </button> */}
     </form>
   );
 };
