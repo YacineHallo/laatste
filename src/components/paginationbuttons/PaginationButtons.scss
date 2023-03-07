@@ -11,11 +11,14 @@
   &__pagenumber {
     color: $color-secundair-magenta;
     font-size: $font-size-header;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
   @media screen and (max-width: $max-width-medium) {
     justify-content: center;
   }
-  @media screen and (max-width: $max-width-extrasmall) {
+
+  @media screen and (max-width: $max-width-small) {
     justify-content: left;
   }
 }
@@ -29,9 +32,9 @@
   color: $color-primary-white;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size-logo;
+  font-size: $font-size-header;
   padding: 1.2rem 1.4rem;
-  margin: 1rem 5rem;
+  margin: 1rem 3rem;
   &:hover {
     transform: scale(1.02) perspective(0px);
     box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);

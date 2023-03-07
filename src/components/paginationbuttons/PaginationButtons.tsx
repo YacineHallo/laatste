@@ -13,11 +13,11 @@ export const PaginationButtons = ({
   pageNumber: number;
   setPageNumber: (number: number) => void;
 }) => {
-  let prev = () => {
+  const vorige = () => {
     setPageNumber(pageNumber - 1);
   };
   // eslint-disable-next-line @typescript-eslint/no-redeclare
-  let next = () => {
+  const volgende = () => {
     setPageNumber(pageNumber + 1);
   };
   //bij onclick next moet er voor zoeken geen knop next meer komen wanneer er minder dan 20
@@ -26,15 +26,17 @@ export const PaginationButtons = ({
     <>
       <div className="pagination">
         {pageNumber > 1 && (
-          <button className="button-pagination" onClick={prev}>
-            Prev
+          <button className="button-pagination" onClick={vorige}>
+            Vorige
           </button>
         )}
-        <p className="pagination__pagenumber">Page {pageNumber}</p>
 
+        {pageNumber > 1 && (
+          <p className="pagination__pagenumber"> Pag. {pageNumber}</p>
+        )}
         {pageNumber < totalPages && (
-          <button className="button-pagination" onClick={next}>
-            Next
+          <button className="button-pagination" onClick={volgende}>
+            Volgende
           </button>
         )}
       </div>

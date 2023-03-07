@@ -37,7 +37,7 @@ export const SearchView = () => {
         setPageNumber={setPageNumber}
         totalPages={character?.info.pages}
       />
-      <div className="container__main">
+      <div>
         <SearchComponent setSearch={setSearch} setPageNumber={setPageNumber} />
       </div>
       <PageWrapper isLoading={loading}>
