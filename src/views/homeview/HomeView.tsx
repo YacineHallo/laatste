@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
 import CharacterComponent from "../../components/charactercomponent/CharacterCOmponent";
-import { ICharacter, ICharactersResponse, IInfo } from "../../types/IndexTypes";
+import { ICharacter, ICharactersResponse } from "../../types/IndexTypes";
 import { PaginationButtons } from "../../components/paginationbuttons/PaginationButtons";
 import { SearchComponent } from "../../components/searchcomponent/SearchComponent";
 export const HomeView = () => {
@@ -15,14 +15,13 @@ export const HomeView = () => {
     try {
       const api = process.env.REACT_APP_API_URL; //deze .env plaats je in de mappenstructuur op rootniveau
       const res = await await fetch(
-        // `${api}/character/?page=${newPage}&name=${search}`
         `${api}/character/?page=${newPage}&name=${search}`
       );
       const resJson: ICharactersResponse = await res.json();
       console.log("res ", resJson);
       setCharacter(resJson);
-    } catch (error) {
-      console.log("oeps   ", error);
+    } catch (e) {
+      console.log("oeps   ", e);
     } finally {
       setLoading(false);
     }
@@ -38,7 +37,7 @@ export const HomeView = () => {
         setPageNumber={setPageNumber}
         totalPages={character?.info.pages}
       />
-      <div className="container__main">
+      <div>
         <SearchComponent setSearch={setSearch} setPageNumber={setPageNumber} />
       </div>
       <PageWrapper isLoading={loading}>
@@ -51,3 +50,4 @@ export const HomeView = () => {
     </>
   );
 };
+//
