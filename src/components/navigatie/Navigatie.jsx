@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 //import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
-//import { SearchBarToggle } from "@amsterdam/asc-ui";
+import { SearchBarToggle } from "@amsterdam/asc-ui";
 import "../../App.scss";
 
 export const Navigatie = () => {
@@ -38,27 +38,20 @@ export const Navigatie = () => {
               Locaties
             </NavLink>
           </li>
-          <li className="navigation__item">
+          {/* <li className="navigation__item">
             <NavLink to="/zoekresultaat" className="navigation__link">
               Zoeken
             </NavLink>
-          </li>
+          </li> */}
+        </ul>
+
+        <ul className="navigation__zoek">
           <li className="navigation__item">
             <NavLink to="/contact" className="navigation__link">
               Contact
             </NavLink>
           </li>
         </ul>
-
-        {/* <ul className="navigation__zoek">
-          <li className="navigation__item">
-            <SearchBarToggle
-              align="left"
-              onOpen={function noRefCheck() {}}
-              onSubmit={function noRefCheck() {}}
-            />
-          </li>
-        </ul> */}
       </nav>
     </header>
   );

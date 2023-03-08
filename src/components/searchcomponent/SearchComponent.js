@@ -25,7 +25,7 @@ export const SearchComponent = ({ setSearch, setPageNumber }) => {
           Zoek
         </button>
       </NavLink>
-      <NavLink to="/zoekresultaat" className="navigation__link">
+      <NavLink to="/" className="navigation__link">
         <button type="reset" className="button-search">
           Leeg
         </button>

@@ -8,7 +8,7 @@ import { Navigatie } from "./components/navigatie/Navigatie";
 import Footer1 from "./components/footer/Footer";
 import { CharacterDetailView } from "./views/characterdetailview/CharacterDetailView";
 import { ContactViewJS } from "./views/contactview/ContactViewJS";
-import { SearchView } from "./views/searchview/SearchView";
+//import { SearchView } from "./views/searchview/SearchView";
 import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
 import { LocatieView } from "./views/locatieview/LocatieView";
 
@@ -34,7 +34,6 @@ function App() {
           path="/characters/:id"
         />
         <Route element={<ContactViewJS />} path="/contact" />
-        <Route element={<SearchView />} path="/zoekresultaat" />
         <Route element={<EpisodeView />} path="/episode" />
         <Route element={<LocatieView />} path="/locatie" />
       </Routes>
