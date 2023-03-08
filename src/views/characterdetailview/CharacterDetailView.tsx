@@ -2,6 +2,7 @@ import { ICharacter } from "../../types/IndexTypes";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
+import { CharacterStatusComponent } from "../../components/charactercomponent/characterstatuscomponent/CharacterStatusComponent";
 import "../../App.scss";
 //import CharacterDetailComponent from "../../components/characterdetailcomponent/CharacterDetailComponent";
 
@@ -36,20 +37,22 @@ export const CharacterDetailView = (results: ICharacter) => {
         <div className="container">
           <div className="detail">
             <img src={character.image} alt="" className="detail__img" />
-            <div className="character-detail">
-              <h1 className="character-detail__header">{character.name}</h1>
-              {/* <img
+            <div>
+              <div className="character-detail">
+                <h1 className="character-detail__header">{character.name}</h1>
+                {/* <img
               src={character.image}
               alt={`drawing of ${character.name}`}
               className="character-detail__img"
               width="600"
               height="600"
             /> */}
-              <ul className="character-detail-component">
-                <li> Status: {character.status}</li>
-                <li> Species: {character.species}</li>
-                <li> Gender: {character.gender}</li>
-              </ul>
+                <ul className="character-detail__component">
+                  <CharacterStatusComponent status={character.status} />
+                  <li> Species: {character.species}</li>
+                  <li> Gender: {character.gender}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
