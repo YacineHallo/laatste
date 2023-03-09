@@ -60,6 +60,8 @@
     ); //hier zouden de cards smaller moeten worden
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
+    margin: auto;
+    padding: auto;
   }
 
   @media screen and (max-width: $max-width-small) {
