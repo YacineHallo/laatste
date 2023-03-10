@@ -1,9 +1,48 @@
+// import "../../App.scss";
+// import { IEpisode } from "../../types/IndexTypes";
+// import { useNavigate } from "react-router-dom";
+// //import { CharacterStatusComponent } from "./characterstatuscomponent/CharacterStatusComponent";
+
+// export const EpisodeDetailView = (results: IEpisode) => {
+//   const { id, air_date, name, episode, created, characters } = results;
+//   const navigate = useNavigate();
+//   //eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+//   return (
+//     <div className="border" onClick={() => navigate(`/characters/${id}`)}>
+//       <article className="character" key={id}>
+//         <h3 className="character__header">{name}</h3>
+
+//         <h4 className="character__header">{air_date}</h4>
+
+//         <article className="character-component">
+//           <ul>
+//             <li className="character-component__eigenschap hover">
+//               Species: {created}
+//             </li>
+//             <li className="character-component__eigenschap hover">
+//               Episode: {episode}
+//             </li>
+//             {results.characters.map(
+//               <ul>
+//                 <li>ID {characters.id}</li>
+//                 <li>Name{characters.name}</li>
+//               </ul>
+//             )}
+//             ;
+//           </ul>
+//         </article>
+//       </article>
+//     </div>
+//   );
+// };
+
 import { IEpisode } from "../../types/IndexTypes";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-//import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
+import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
 
-//import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
+import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
 //import CharacterComponent from "../../components/charactercomponent/CharacterCOmponent";
 import "../../App.scss";
 //import CharacterDetailComponent from "../../components/characterdetailcomponent/CharacterDetailComponent";
@@ -36,14 +75,19 @@ export const EpisodeDetailView = (results: IEpisode) => {
   }, [getEpisode]);
 
   return (
-    <div className="container">
-      <div className="detail">
-        <h1>{episode?.name}</h1>
-        {episode?.characters.map(x => {
-          return <p>{episode.characters}</p>;
-        })}
-      </div>
-    </div>
+    <>
+      <PageWrapper isLoading={loading}>
+        <div className="container">
+          <div className="detail">
+            <h1>{episode?.name}</h1>
+            <h2>ttttt</h2>
+            {episode?.characters.map(() => {
+              return <p>{episode?.characters}</p>;
+            })}
+          </div>
+        </div>
+      </PageWrapper>
+    </>
   );
 };
 
@@ -83,6 +127,4 @@ export const EpisodeDetailView = (results: IEpisode) => {
 //   {/* //       </article> */}
 //   {/* //     </div> */}
 //   {/* //   )}
-// // </PageWrappernietOverzicht> */}
-
-
+// // </PageWrappernietOverzicht> */

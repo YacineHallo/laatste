@@ -6,6 +6,7 @@ export interface IEpisode {
   air_date: string;
   episode: string;
   characters: {
+    [x: string]: any;
     id: number;
     name: string;
   };

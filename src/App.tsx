@@ -34,9 +34,21 @@ function App() {
           path="/characters/:id"
         />
         <Route
-          element={<EpisodeDetailView id={""} name={""} characters={[]} />}
+          element={
+            <EpisodeDetailView
+              id={""}
+              name={""}
+              air_date={""}
+              episode={""}
+              created={""}
+              url={""}
+              //@ts-ignore
+              characters={[]}
+            />
+          }
           path="/episode/:id"
         />
+
         <Route element={<ContactViewJS />} path="/contact" />
         <Route element={<EpisodeView />} path="/episode" />
         <Route element={<LocatieView />} path="/locatie" />
