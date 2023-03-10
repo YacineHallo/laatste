@@ -12,6 +12,7 @@ import { ContactViewJS } from "./views/contactview/ContactViewJS";
 import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
 import { LocatieView } from "./views/locatieview/LocatieView";
 import { EpisodeDetailView } from "./views/episodedetailview/EpisodeDetailView";
+
 function App() {
   return (
     <div className="App">
