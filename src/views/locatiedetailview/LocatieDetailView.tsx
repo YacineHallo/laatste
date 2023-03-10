@@ -41,12 +41,19 @@ export const LocatieDetailView = (results: ILocation) => {
     <PageWrappernietOverzicht isLoading={loading}>
       <div className="container">
         <div className="detail">
-          <h1 className="episode-detail__header">{locatie?.name}</h1>
+          <h1 className="locatie-detail__header">
+            Characters die gezien zijn op locatie {locatie?.name}
+          </h1>
+          <div className="locatie-detail__info">
+            <p> Dimension: {locatie?.dimension}</p>
+            <p> Created: {locatie?.created}</p>
+            <p>Waar: {locatie?.type}</p>
+          </div>
           {locatie?.residents.map(x => {
             //console.log(x);
             return (
               <ul>
-                <li className="episode-detail__component">{x}</li>;
+                <li className="locatie-detail__component">{x}</li>;
               </ul>
             );
           })}
