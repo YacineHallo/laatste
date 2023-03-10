@@ -11,7 +11,7 @@ import { ContactViewJS } from "./views/contactview/ContactViewJS";
 //import { SearchView } from "./views/searchview/SearchView";
 import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
 import { LocatieView } from "./views/locatieview/LocatieView";
-
+import { EpisodeDetailView } from "./views/episodedetailview/EpisodeDetailView";
 function App() {
   return (
     <div className="App">
@@ -32,6 +32,10 @@ function App() {
             />
           }
           path="/characters/:id"
+        />
+        <Route
+          element={<EpisodeDetailView id={""} name={""} characters={[]} />}
+          path="/episode/:id"
         />
         <Route element={<ContactViewJS />} path="/contact" />
         <Route element={<EpisodeView />} path="/episode" />

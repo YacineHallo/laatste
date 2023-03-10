@@ -8,7 +8,7 @@ const EpisodeComponent = (results: IEpisode) => {
   const navigate = useNavigate();
 
   return (
-    <div className="border" onClick={() => navigate(`/characters/${id}`)}>
+    <div className="border" onClick={() => navigate(`/episode/${id}`)}>
       <article className="character" key={id}>
         <h3 className="character__header">{name}</h3>
 
