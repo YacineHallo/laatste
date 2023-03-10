@@ -3,7 +3,12 @@ export interface ILocation {
   name: string;
   type: string;
   dimension: string;
-  residents: { id: number; name: string }[];
+  residents: [];
   url: string;
   created: string;
+}
+
+export interface ILocationResidents {
+  id: number;
+  name: string;
 }
