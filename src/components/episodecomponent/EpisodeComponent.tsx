@@ -10,7 +10,7 @@ const EpisodeComponent = (results: IEpisode) => {
   return (
     <div className="border" onClick={() => navigate(`/episode/${id}`)}>
       <article className="character" key={id}>
-        <h3 className="character__header">{name}</h3>
+        <h3 className="character__header">Episode: {name}</h3>
 
         {/* <img
           src={image}
@@ -18,16 +18,10 @@ const EpisodeComponent = (results: IEpisode) => {
           className="character__img"
         /> */}
 
-        <h4 className="character__header">{air_date}</h4>
-
         <article className="character-component">
           <ul>
             <li className="character-component__eigenschap hover">
-              Species: {created}
-            </li>
-
-            <li className="character-component__eigenschap hover">
-              Episode: {episode}
+              Episodenr: {episode}
             </li>
           </ul>
         </article>

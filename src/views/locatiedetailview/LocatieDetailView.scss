@@ -6,6 +6,7 @@
   overflow: hidden;
   position: relative;
   background-color: aqua;
+
   &__img {
     opacity: 1;
     position: absolute;
@@ -21,23 +22,25 @@
   }
 }
 
-.episode-detail {
+.locatie-detail {
   &__header {
     font-size: $font-size-logo;
     color: $color-primary-black;
     text-align: center;
     position: relative;
+
     @media screen and (max-width: 690px) {
       font-size: $font-size-header;
     }
   }
 
+  &__info {
+    margin-bottom: 3rem;
+    font-size: $font-size-header;
+  }
+
   &__component {
     text-align: center;
-    font-size: $font-size-header;
-
-    @media screen and (max-width: 690px) {
-      font-size: $font-size-default;
-    }
+    font-size: $font-size-default;
   }
 }

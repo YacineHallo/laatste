@@ -10,24 +10,12 @@ const LocatieComponent = (results: ILocation) => {
   return (
     <div className="border" onClick={() => navigate(`/location/${id}`)}>
       <article className="character" key={id}>
-        <h3 className="character__header">{name}</h3>
-
-        {/* <img
-          src={image}
-          alt={`drawing of ${name}`}
-          className="character__img"
-        /> */}
-
-        <h4 className="character__header">{type}</h4>
+        <h3 className="character__header">Locatie: {name}</h3>
 
         <article className="character-component">
           <ul>
             <li className="character-component__eigenschap hover">
-              Created: {created}
-            </li>
-
-            <li className="character-component__eigenschap hover">
-              Dimension: {dimension}
+              Waar:{type}
             </li>
           </ul>
         </article>

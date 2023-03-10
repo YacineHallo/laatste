@@ -40,7 +40,14 @@ export const EpisodeDetailView = (results: IEpisode) => {
     <PageWrappernietOverzicht isLoading={loading}>
       <div className="container">
         <div className="detail">
-          <h1 className="episode-detail__header">{episode?.name}</h1>
+          <h1 className="episode-detail__header">
+            Characters die in episode {episode?.name} voorkomen
+          </h1>
+
+          <p className="episode-detail__info">
+            Uitgekomen op: {episode?.air_date}
+          </p>
+
           {episode?.characters.map(x => {
             return (
               <ul>
