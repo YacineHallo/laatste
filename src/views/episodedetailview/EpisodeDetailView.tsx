@@ -2,7 +2,7 @@ import { IEpisode } from "../../types/IndexTypes";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 //import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
-
+import { useNavigate } from "react-router-dom";
 import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
 //import CharacterComponent from "../../components/charactercomponent/CharacterCOmponent";
 import "../../App.scss";
@@ -12,6 +12,7 @@ export const EpisodeDetailView = (results: IEpisode) => {
   let { id } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [episode, setEpisode] = useState<IEpisode>();
+  const navigate = useNavigate();
   //const [character, setCharacter] = useState<ICharactersResponse>();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,9 +40,13 @@ export const EpisodeDetailView = (results: IEpisode) => {
     <PageWrappernietOverzicht isLoading={loading}>
       <div className="container">
         <div className="detail">
-          <h1>{episode?.name}</h1>
+          <h1 className="episode-detail__header">{episode?.name}</h1>
           {episode?.characters.map(x => {
-            return <p>{episode.characters}</p>;
+            return (
+              <ul>
+                <li className="episode-detail__component">{x}</li>;
+              </ul>
+            );
           })}
         </div>
       </div>
