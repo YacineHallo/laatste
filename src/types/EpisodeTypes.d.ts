@@ -1,5 +1,3 @@
-import { ICharacter } from "./CharacterTypes";
-
 export interface IEpisode {
   id: string;
   name: string;
