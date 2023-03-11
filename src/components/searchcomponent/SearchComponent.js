@@ -11,7 +11,7 @@ export const SearchComponent = ({ setSearch, setPageNumber }) => {
           setPageNumber(1);
           setSearch(e.target.value);
         }}
-        placeholder="Zoek characters op naam"
+        placeholder="Zoek op naam"
         type="text"
         className="input"
       />
