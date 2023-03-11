@@ -1,10 +1,17 @@
 import { NavLink } from "react-router-dom";
 
-//import { ZoekComponent } from "../zoekcomponent/ZoekComponent";
-import { SearchBarToggle } from "@amsterdam/asc-ui";
-import "../../App.scss";
-
 export const Navigatie = () => {
+  const links = document.querySelectorAll("navigation__link");
+
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      links.forEach(link => {
+        link.classList.remove("active");
+      });
+      this.classList.add("active");
+    });
+  });
+
   return (
     <header className="header">
       <NavLink to="/">
@@ -24,7 +31,7 @@ export const Navigatie = () => {
       <nav className="header__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <NavLink to="/" className="navigation__link">
+            <NavLink to="/characters" className="navigation__link">
               Characters
             </NavLink>
           </li>
@@ -38,14 +45,9 @@ export const Navigatie = () => {
               Locaties
             </NavLink>
           </li>
-          {/* <li className="navigation__item">
-            <NavLink to="/zoekresultaat" className="navigation__link">
-              Zoeken
-            </NavLink>
-          </li> */}
         </ul>
 
-        <ul className="navigation__zoek">
+        <ul className="navigation__contact">
           <li className="navigation__item">
             <NavLink to="/contact" className="navigation__link">
               Contact
