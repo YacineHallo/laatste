@@ -1,36 +1,5 @@
 @import "../../constants/scss_basic_var/Variables.scss";
 
-// .page-wrapper {
-//   min-height: 100vh;
-//   max-width: 1400px;
-//   margin: 0 auto;
-// }
-
-// .container__main {
-//   min-width: 50rem;
-//   //max-width: 140rem;
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   grid-template-rows: 1fr 1fr;
-//   gap: 1rem;
-//   background-color: $color-primary-white;
-//   padding: 1rem 4rem;
-//   margin: auto;
-
-//   @media screen and (min-width: 60rem) {
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: 1fr 1fr;
-//     gap: 1.5rem;
-//   }
-
-//   @media screen and (min-width: 82rem) and (max-width: 140rem) {
-//     grid-template-columns: repeat(4, 1fr);
-//     grid-template-rows: 1fr 1fr;
-//     gap: 2rem;
-//     padding: 1rem 4rem;
-//     margin: auto;
-//   }
-// }
 .spinner {
   max-width: 50%;
   max-height: 50%;
