@@ -35,8 +35,12 @@ export const CharacterDetailView = (results: ICharacter) => {
     <PageWrappernietOverzicht isLoading={loading}>
       {character && (
         <div className="container">
-          <div className="detail">
-            <img src={character.image} alt="" className="detail__img" />
+          <div className="detail-character">
+            <img
+              src={character.image}
+              alt=""
+              className="detail-character__img"
+            />
             <div>
               <div className="character-detail">
                 <h1 className="character-detail__header">{character.name}</h1>
