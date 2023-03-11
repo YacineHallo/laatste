@@ -1,109 +1,149 @@
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  color: $color-secundair-magenta;
+  align-self: center;
+  justify-items: center;
+  @media screen and (max-width: $max-width-medium) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
 .grid-header {
   //grid-area: header;
-  grid-column-start: 1;
-  grid-column-end: span 4;
+  grid-column-start: 2;
+  grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: 1;
 }
-.boas {
-  grid-column-start: 1;
+.grid-intro {
+  grid-column-start: 2;
   grid-column-end: span 2;
   grid-row-start: 2;
   grid-row-end: 2;
 }
-.salim {
-  //grid-area: salim;
-  grid-column-start: 3;
-  grid-column-end: span 2;
-  grid-row-start: 2;
-  grid-row-end: span 2;
-}
 .frontend {
   //grid-area: frontend;
-  grid-column-start: 2;
-  grid-column-end: span 2;
-  grid-row-start: 3;
-  grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  &__img {
+    border-radius: 50%;
+    border: 5px solid $color-secundair-magenta;
+    @media screen and (max-width: $max-width-small) {
+      max-width: 400px;
+      border: 2px;
+    }
+  }
 }
+.boas {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.salim {
+  //grid-area: salim;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
 .jack {
   grid-column-start: 4;
-  grid-column-end: span 4;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  @media screen and (max-width: $max-width-medium) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
+}
+.bettina {
+  //grid-area: bettina;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  @media screen and (max-width: $max-width-medium) {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
+}
+.micha {
+  grid-column-start: 1;
+  grid-column-end: 1;
   grid-row-start: 3;
   grid-row-end: 3;
+  @media screen and (max-width: $max-width-medium) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
 }
 .george {
   //grid-area: george;
   grid-column-start: 4;
-  grid-column-end: span 4;
-  grid-row-start: 4;
-  grid-row-end: 4;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  @media screen and (max-width: $max-width-medium) {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+  }
 }
 .yacine {
   //grid-area: yacine;
-  grid-column-start: 4;
-  grid-column-end: span 4;
-  grid-row-start: 5;
-  grid-row-end: 5;
-}
-
-.bettina {
-  //grid-area: bettina;
-  grid-column-start: 1;
-  grid-column-end: span 1;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.micha {
-  grid-column-start: 1;
-  grid-column-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
   grid-row-start: 4;
   grid-row-end: 4;
 }
+
 .lesley {
   //grid-area: lesley;
   grid-column-start: 1;
-  grid-column-end: span 1;
-  grid-row-start: 5;
-  grid-row-end: 5;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 
 .luisa {
   //grid-area: luisa;
-  grid-column-start: 1;
-  grid-column-end: span 2;
-  grid-row-start: 6;
-  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 .bosko {
   //grid-area: bosko;
-  grid-column-start: 3;
-  grid-column-end: span 2;
-  grid-row-start: 6;
-  grid-row-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 
-.home-container {
-  // gap: 2rem;
-  // background-color: $color-primary-white;
-  // padding: 1rem 4rem;
-  // margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  // grid-template-areas:
-  //   "header header header header"
-  //   "boas salim"
-  //   "micha frontend frontend jack"
-  //   "bettina frontend frontend george"
-  //   "lesley frontend frontend yacine"
-  //   "luisa bosko";
+.persoon {
+  max-width: 100px;
+  &__naam {
+    font-size: $font-size-header;
+    text-align: center;
+  }
+  &__bijschrift {
+    font-size: $font-size-small;
+  }
 }
-// &__header {
-//   margin: 0;
-//   padding-bottom: 1rem;
-//   font-size: $font-size-logo;
-// }
 
 .image-persoon {
   border-radius: 50%;

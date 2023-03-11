@@ -13,54 +13,108 @@ export const HomeView = () => {
   return (
     <>
       <div className="main home-container">
-        <h1 className="home-container__header grid-header">
-          Rick and Morty side als eindopdracht
-        </h1>
-        <img
-          src={frontend}
-          alt="foto van frontendteam gemaakt bij de introductie"
-          className="frontend"
-        />
-        <figure className="boas">
-          <img src={boas} alt="boas" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="yacine">
-          <img src={ikke} alt="yacine" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="george">
-          <img src={george4u} alt="george4u" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="jack">
-          <img src={javajack} alt="javajack" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="micha">
-          <img src={micha} alt="micha" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="bettina">
-          <img src={bettina} alt="bettina" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="lesley">
-          <img src={lesley} alt="lesley" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="salim">
-          <img src={salim} alt="salim" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="luisa">
-          <img src={luisa} alt="luisa" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
-        <figure className="bosko">
-          <img src={bosko} alt="bosko" className="image-persoon" />
-          <figcaption>Teacher Boas, wat een geduld!</figcaption>
-        </figure>
+        <div className="grid-header">
+          <h1 className="grid-header__header">
+            Rick and Morty side als eindopdracht
+          </h1>
+          <p className="grid-header__intro">wat text overr het een en ander</p>
+        </div>
+        <div className="frontend">
+          <img
+            src={frontend}
+            alt="foto van frontendteam gemaakt bij de introductie"
+            className="frontend__img"
+          />
+        </div>
+        <div className="boas persoon">
+          <p className="persoon__naam">Boas</p>
+          <figure>
+            <img src={boas} alt="boas" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Teacher Boas, wat een geduld en kunde!
+            </figcaption>
+          </figure>
+        </div>
+        <div className="yacine persoon">
+          <p className="persoon__naam">Yacine</p>
+          <figure>
+            <img src={ikke} alt="yacine" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">Tja..;-)</figcaption>
+          </figure>
+        </div>
+        <div className="george persoon">
+          <p className="persoon__naam">George</p>
+          <figure>
+            <img src={george4u} alt="george4u" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              George4u, altijd gezellig en blijft toch een echte ICT'er
+              &#128522;
+            </figcaption>
+          </figure>
+        </div>
+        <div className="jack persoon">
+          <p className="persoon__naam">Jack</p>
+          <figure>
+            <img src={javajack} alt="javajack" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              JavaJack jullie weten inmiddels waarom
+            </figcaption>
+          </figure>
+        </div>
+        <div className="micha persoon">
+          <p className="persoon__naam">Micha</p>
+          <figure>
+            <img src={micha} alt="micha" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Erg veel overzicht en structuur, daar heb je een goeie aan!
+            </figcaption>
+          </figure>
+        </div>
+        <div className="bettina persoon">
+          <p className="persoon__naam">Bettina</p>
+          <figure>
+            <img src={bettina} alt="bettina" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Wat een energie en enthousiasme!
+            </figcaption>
+          </figure>
+        </div>
+        <div className="lesley persoon">
+          <p className="persoon__naam">Lesley</p>
+          <figure>
+            <img src={lesley} alt="lesley" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Wat een rust, heerlijk
+            </figcaption>
+          </figure>
+        </div>
+        <div className="salim persoon">
+          <p className="persoon__naam">Salim</p>
+          <figure>
+            <img src={salim} alt="salim" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              My god wat ben jij goed en snel!
+            </figcaption>
+          </figure>
+        </div>
+        <div className="luisa persoon">
+          <p className="persoon__naam">Luisa</p>
+          <figure>
+            <img src={luisa} alt="luisa" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Jammer dat je wegging, je kon goed uitleggen
+            </figcaption>
+          </figure>
+        </div>
+        <div className="bosko persoon">
+          <p className="persoon__naam">Bosko</p>
+          <figure>
+            <img src={bosko} alt="bosko" className="image-persoon" />
+            <figcaption className="persoon__bijschrift">
+              Shit Bosko, ik hoop dat het goed met je gaat.
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </>
   );
