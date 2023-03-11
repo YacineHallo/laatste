@@ -8,17 +8,21 @@ import { Navigatie } from "./components/navigatie/Navigatie";
 import Footer1 from "./components/footer/Footer";
 import { CharacterDetailView } from "./views/characterdetailview/CharacterDetailView";
 import { ContactViewJS } from "./views/contactview/ContactViewJS";
+import { CharacterView } from "./views/characterview/CharacterView";
+
 //import { SearchView } from "./views/searchview/SearchView";
 import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
 import { LocatieView } from "./views/locatieview/LocatieView";
 import { EpisodeDetailView } from "./views/episodedetailview/EpisodeDetailView";
 import { LocatieDetailView } from "./views/locatiedetailview/LocatieDetailView";
+
 function App() {
   return (
     <div className="App">
       <Navigatie />
       <Routes>
         <Route element={<HomeView />} path="/" />
+        <Route element={<CharacterView />} path="/characters" />
         <Route
           element={
             <CharacterDetailView
