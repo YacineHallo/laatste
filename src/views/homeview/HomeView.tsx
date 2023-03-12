@@ -22,7 +22,7 @@ export const HomeView = () => {
             cursisten, voor het traject dat we de laatste negen maanden met
             elkaar doorlopen hebben. Hieronder zie je de foto die gemaakt is bij
             de zogenaamde aftrap en er omheen wordt iedereen even genoemd, met
-            iets wat me van hen zal bij blijven.
+            iets wat me van hen zal bijblijven.
           </div>
         </div>
         <div className="frontend">
@@ -37,7 +37,7 @@ export const HomeView = () => {
           <figure>
             <img src={boas} alt="boas" className="image-persoon" />
             <figcaption className="persoon__bijschrift">
-              Teacher Boas, wat een geduld en kunde!
+              The one and only, Boas! Veel geduld en nog meer kunde!
             </figcaption>
           </figure>
         </div>
