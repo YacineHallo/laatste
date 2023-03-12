@@ -1,3 +1,4 @@
+// is een amsterdam component geen view van gemaakt.., had wel gemoeten, liep tegen typescript aan
 import {
   FooterBottom,
   Column,
@@ -12,7 +13,7 @@ import {
 } from "@amsterdam/asc-ui";
 import React from "react";
 
-const Footer1 = () => (
+export const Footer1 = () => (
   <Footer className="container__footer">
     <FooterTop className="footer">
       <Row>
@@ -36,16 +37,6 @@ const Footer1 = () => (
                   target="_blank"
                 >
                   Website van Amsterdam
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem ipsum dolor.
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link darkBackground href="/" inList>
-                  Lorem.
                 </Link>
               </ListItem>
             </List>
@@ -181,5 +172,3 @@ const Footer1 = () => (
     </FooterBottom>
   </Footer>
 );
-
-export default Footer1;

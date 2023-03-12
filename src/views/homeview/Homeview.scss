@@ -17,12 +17,13 @@
   grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: 1;
-}
-.grid-intro {
-  grid-column-start: 2;
-  grid-column-end: span 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  text-align: center;
+  // &__header{
+
+  // }
+  // &__intro {
+
+  // }
 }
 .frontend {
   //grid-area: frontend;
@@ -35,7 +36,7 @@
     border: 5px solid $color-secundair-magenta;
     @media screen and (max-width: $max-width-small) {
       max-width: 400px;
-      border: 2px;
+      border: 2px solid $color-secundair-magenta;
     }
   }
 }
@@ -149,4 +150,5 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  border: 3px solid $color-secundair-magenta;
 }

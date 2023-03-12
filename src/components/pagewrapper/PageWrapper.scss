@@ -6,7 +6,6 @@
 }
 
 .container__main {
-  //min-width: 820px;
   max-width: $max-width-max;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

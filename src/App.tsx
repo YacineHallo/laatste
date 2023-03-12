@@ -5,7 +5,7 @@ import "./App.scss";
 
 import { HomeView } from "./views/homeview/HomeView";
 import { Navigatie } from "./components/navigatie/Navigatie";
-import Footer1 from "./components/footer/Footer";
+import { Footer1 } from "./components/footer/Footer";
 import { CharacterDetailView } from "./views/characterdetailview/CharacterDetailView";
 import { ContactViewJS } from "./views/contactview/ContactViewJS";
 import { CharacterView } from "./views/characterview/CharacterView";
@@ -15,6 +15,7 @@ import { EpisodeView } from "./views/episodeview/EpisodeViewTSX";
 import { LocatieView } from "./views/locatieview/LocatieView";
 import { EpisodeDetailView } from "./views/episodedetailview/EpisodeDetailView";
 import { LocatieDetailView } from "./views/locatiedetailview/LocatieDetailView";
+//import { FooterView } from "./views/footerview/FooterView";
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Route element={<EpisodeView />} path="/episode" />
         <Route element={<LocatieView />} path="/locatie" />
       </Routes>
+
       <Footer1 />
     </div>
   );

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
 import { CharacterStatusComponent } from "../../components/charactercomponent/characterstatuscomponent/CharacterStatusComponent";
 import "../../App.scss";
-//import CharacterDetailComponent from "../../components/characterdetailcomponent/CharacterDetailComponent";
 
 export const CharacterDetailView = (results: ICharacter) => {
   let { id } = useParams();
@@ -44,13 +43,7 @@ export const CharacterDetailView = (results: ICharacter) => {
             <div>
               <div className="character-detail">
                 <h1 className="character-detail__header">{character.name}</h1>
-                {/* <img
-              src={character.image}
-              alt={`drawing of ${character.name}`}
-              className="character-detail__img"
-              width="600"
-              height="600"
-            /> */}
+
                 <ul className="character-detail__component">
                   <CharacterStatusComponent status={character.status} />
                   <li> Species: {character.species}</li>
