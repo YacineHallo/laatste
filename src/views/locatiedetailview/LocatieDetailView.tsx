@@ -36,6 +36,9 @@ export const LocatieDetailView = (results: ILocation) => {
   useEffect(() => {
     getLocatie();
   }, []);
+  useEffect(() => {
+    document.title = "Locaties | Rick & Morthy";
+  }, []);
 
   return (
     <PageWrappernietOverzicht isLoading={loading}>

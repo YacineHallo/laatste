@@ -30,6 +30,7 @@ export const CharacterDetailView = (results: ICharacter) => {
   useEffect(() => {
     getCharacter();
   }, []);
+
   return (
     <PageWrappernietOverzicht isLoading={loading}>
       {character && (

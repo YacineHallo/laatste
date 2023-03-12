@@ -30,6 +30,11 @@ export const CharacterView = () => {
   useEffect(() => {
     getCharacters(pageNumber, search);
   }, [pageNumber, search]);
+
+  useEffect(() => {
+    document.title = "Characters | Rick & Morthy";
+  }, []);
+
   return (
     <>
       <PaginationButtons

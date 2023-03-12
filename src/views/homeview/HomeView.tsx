@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import frontend from "../../assets/images/FotoBeginFrontend.png";
 import ikke from "../../assets/images/ikke.png";
 import george4u from "../../assets/images/George4u.png";
@@ -10,12 +12,15 @@ import salim from "../../assets/images/Salim.png";
 import luisa from "../../assets/images/Luisa.png";
 import bosko from "../../assets/images/Bosko.png";
 export const HomeView = () => {
+  useEffect(() => {
+    document.title = "Wij | Rick & Morthy";
+  }, []);
   return (
     <>
       <div className="main home-container">
         <div className="grid-header">
           <h1 className="grid-header__header">
-            Rick and Morty als eindopdracht
+            Rick and Morthy als eindopdracht
           </h1>
           <div className="grid-header__intro">
             Bij deze wil ik met name Boas bedanken, maar ook de andere

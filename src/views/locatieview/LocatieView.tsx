@@ -31,6 +31,10 @@ export const LocatieView = () => {
   useEffect(() => {
     getLocations(pageNumber, search);
   }, [pageNumber, search]);
+  useEffect(() => {
+    document.title = "Locaties | Rick & Morthy";
+  }, []);
+
   return (
     <>
       <PaginationButtons
