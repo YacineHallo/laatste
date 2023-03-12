@@ -25,20 +25,6 @@ export const SearchComponent = ({ setSearch, setPageNumber }) => {
           Zoek
         </button>
       </NavLink>
-      <NavLink to="/" className="navigation__link">
-        <button type="reset" className="button-search">
-          Leeg
-        </button>
-      </NavLink>
-
-      {/* <button
-        type="reset"
-        onChange={e => {
-          setPageNumber(1);
-        }}
-      >
-        clear
-      </button> */}
     </form>
   );
 };

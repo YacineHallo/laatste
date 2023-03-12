@@ -17,7 +17,21 @@ export const HomeView = () => {
           <h1 className="grid-header__header">
             Rick and Morty side als eindopdracht
           </h1>
-          <p className="grid-header__intro">wat text overr het een en ander</p>
+          <p className="grid-header__intro">
+            wat text overr het een en anderwat text overr het een en anderwat
+            text overr het een en anderwat text overr het een en anderwat text
+            overr het een en anderwat text overr het een en anderwat text overr
+            het een en anderwat text overr het een en anderwat text overr het
+            een en anderwat text overr het een en ander wat text overr het een
+            en anderwat text overr het een en anderwat text overr het een en
+            ander wat text overr het een en anderwat text overr het een en
+            anderwat text overr het een en anderwat text overr het een en
+            anderwat text overr het een en anderwat text overr het een en
+            anderwat text overr het een en anderwat text overr het een en
+            anderwat text overr het een en anderwat text overr het een en ander
+            wat text overr het een en anderwat text overr het een en anderwat
+            text overr het een en ander
+          </p>
         </div>
         <div className="frontend">
           <img
@@ -57,7 +71,7 @@ export const HomeView = () => {
           <figure>
             <img src={javajack} alt="javajack" className="image-persoon" />
             <figcaption className="persoon__bijschrift">
-              JavaJack jullie weten inmiddels waarom
+              JavaJack jullie weten inmiddels waarom..
             </figcaption>
           </figure>
         </div>
@@ -93,7 +107,7 @@ export const HomeView = () => {
           <figure>
             <img src={salim} alt="salim" className="image-persoon" />
             <figcaption className="persoon__bijschrift">
-              My god wat ben jij goed en snel!
+              Wat ben jij goed en snel!
             </figcaption>
           </figure>
         </div>
@@ -102,7 +116,7 @@ export const HomeView = () => {
           <figure>
             <img src={luisa} alt="luisa" className="image-persoon" />
             <figcaption className="persoon__bijschrift">
-              Jammer dat je wegging, je kon goed uitleggen
+              Jammer dat je wegging..
             </figcaption>
           </figure>
         </div>

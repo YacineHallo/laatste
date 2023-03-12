@@ -1,3 +1,4 @@
+// iGeen view van gemaakt.., had wel gemoeten liep tegen typecscript problemen op
 import { NavLink } from "react-router-dom";
 
 export const Navigatie = () => {

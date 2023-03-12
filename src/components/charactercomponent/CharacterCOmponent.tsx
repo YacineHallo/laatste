@@ -1,5 +1,3 @@
-//import "./CharacterComponent.scss";
-//import hart from "./hartje.jpg";
 import "../../App.scss";
 import { ICharacter } from "../../types/IndexTypes";
 import { useNavigate } from "react-router-dom";
@@ -10,8 +8,8 @@ const CharacterComponent = (results: ICharacter) => {
   const navigate = useNavigate();
 
   return (
-    <div className="border" onClick={() => navigate(`/characters/${id}`)}>
-      <article className="character" key={id}>
+    <article className="character" key={id}>
+      <div className="border" onClick={() => navigate(`/characters/${id}`)}>
         <h3 className="character__header">{name}</h3>
 
         <img
@@ -32,8 +30,8 @@ const CharacterComponent = (results: ICharacter) => {
             </li>
           </ul>
         </article>
-      </article>
-    </div>
+      </div>
+    </article>
   );
 };
 
