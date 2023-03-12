@@ -1,10 +1,26 @@
+.characterdetail-header {
+  color: $color-secundair-magenta;
+  text-align: center;
+  font-size: $font-size-huge;
+  z-index: -2;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  @media screen and (max-width: $max-width-small) {
+    font-size: $font-size-logo;
+  }
+}
+
 .detail-character {
-  max-width: 1000px;
-  height: 1000px;
+  max-width: 800px;
+  height: 800px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: $max-width-small) {
+    max-width: 500px;
+    height: 500px;
+  }
 
   &__img {
     opacity: 0.8;
@@ -36,17 +52,18 @@
   }
 
   &__component {
-    position: relative;
-    float: right;
+    position: absolute;
+    // text-align: right;
     margin-right: 10%;
     list-style-type: none;
     padding-top: 20%;
     padding-bottom: 2rem;
     padding-left: 1rem;
     font-size: $font-size-header;
+    margin-left: 4rem;
 
     @media screen and (max-width: $max-width-small) {
-      font-size: $font-size-default;
+      font-size: $font-size-small;
       align-items: flex-end;
       margin-left: 1rem;
     }
