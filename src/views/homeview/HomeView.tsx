@@ -15,23 +15,15 @@ export const HomeView = () => {
       <div className="main home-container">
         <div className="grid-header">
           <h1 className="grid-header__header">
-            Rick and Morty side als eindopdracht
+            Rick and Morty als eindopdracht
           </h1>
-          <p className="grid-header__intro">
-            wat text overr het een en anderwat text overr het een en anderwat
-            text overr het een en anderwat text overr het een en anderwat text
-            overr het een en anderwat text overr het een en anderwat text overr
-            het een en anderwat text overr het een en anderwat text overr het
-            een en anderwat text overr het een en ander wat text overr het een
-            en anderwat text overr het een en anderwat text overr het een en
-            ander wat text overr het een en anderwat text overr het een en
-            anderwat text overr het een en anderwat text overr het een en
-            anderwat text overr het een en anderwat text overr het een en
-            anderwat text overr het een en anderwat text overr het een en
-            anderwat text overr het een en anderwat text overr het een en ander
-            wat text overr het een en anderwat text overr het een en anderwat
-            text overr het een en ander
-          </p>
+          <div className="grid-header__intro">
+            Bij deze wil ik met name Boas bedanken, maar ook de andere
+            cursisten, voor het traject dat we de laatste negen maanden met
+            elkaar doorlopen hebben. Hieronder zie je de foto die gemaakt is bij
+            de zogenaamde aftrap en er omheen wordt iedereen even genoemd, met
+            iets wat me van hen zal bij blijven.
+          </div>
         </div>
         <div className="frontend">
           <img
