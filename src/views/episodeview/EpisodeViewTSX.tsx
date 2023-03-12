@@ -32,6 +32,9 @@ export const EpisodeView = () => {
   useEffect(() => {
     getEpisodes(pageNumber, search);
   }, [pageNumber, search]);
+  useEffect(() => {
+    document.title = "Episodes | Rick & Morthy";
+  }, []);
   return (
     <>
       <PaginationButtons

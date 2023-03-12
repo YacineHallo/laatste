@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //import { RadioComponent } from "../../components/formulierencomponenten/radiocomponent/RadioComponent";
 //import { PageWrappernietOverzicht } from "../../components/pagewrapper/PageWrapperNietOverzicht";
 //https://dev.to/karan316/build-forms-using-react-the-easy-way-with-typescript-46bh
@@ -39,6 +39,9 @@ export const ContactViewJS = () => {
     );
   };
 
+  useEffect(() => {
+    document.title = "Contact | Rick & Morthy";
+  }, []);
   return (
     <div className="container__form">
       <form onSubmit={handleSubmit} className="main" id="contactForm">
